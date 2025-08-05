@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap';
+
+html, body, #root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-out;
+}
+
+nav:hover a {
+  gap: 0.75rem;
+}
+
+nav a:hover {
+  background-color: #0002;
+  padding: 0.5rem 1rem;
+}
+
+nav a span {
+  max-width: 0;
+  transition: max-width 0.3s ease-out;
+  white-space: nowrap;
+}
+
+nav:hover a span {
+  max-width: 200px;
+}
+
+section {
+  height: 100%;
+}
+
+#stat-table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  padding: 50px 0;
+  gap: 20px 30px;
+}
+
+#grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(4, 40px);
+}
