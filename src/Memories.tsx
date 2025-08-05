@@ -26,7 +26,7 @@ export function Memories() {
 			<h1 className="font-bold text-center text-lg m-4">You might need to wait to see more images, {loadedCount} of 100 loaded</h1>
 			<div className="columns-2 md:columns-4 gap-6 w-full">
 				{images.slice(0, loadedCount).map((src, i) => (
-					<img key={i} src={src} className="w-full border-gray-500 border-[1px] mb-6 rounded-2xl cursor-pointer hover:scale-105 hover:rounded-lg transition-transform" loading="lazy" />
+					<img key={i} src={src} alt="." className="w-full border-gray-500 border-[1px] mb-6 rounded-2xl cursor-pointer hover:scale-105 hover:rounded-lg transition-transform" loading="lazy" />
 				))}
 			</div>
 		</div>
