@@ -41,7 +41,7 @@ root.render(
             <Route path='/' element={Home} />
             <Route path='/goals' element={Goals} />
             <Route path='/memories' element={<Memories/>} />
-            <Route path='/quotes' element={Quote} />
+            <Route path='/quotes' element={<Quote/>} />
           </Routes>
         </main>
       </div>
