@@ -15,12 +15,17 @@ function Column({ id }: { id: number }) {
 	const images = allImages[id];
 
 	useEffect(() => {
-		if (loadedCount < images.length) {
+		setLoadedCount(0); // Reset when id changes
+	}, [id]);
+
+	useEffect(() => {
+		if (loadedCount < allImages[id].length) {
 			const img = new Image();
-			img.src = images[loadedCount];
-			img.onload = () => setLoadedCount(c => ++c);
+			img.src = allImages[id][loadedCount];
+			img.onload = () => setLoadedCount(c => c + 1);
 		}
-	}, [loadedCount]);
+	}, [loadedCount, id]);
+
 
 	return (
 		<div className="flex flex-col">

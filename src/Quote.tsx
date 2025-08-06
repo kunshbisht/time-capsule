@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-type Quote = {
+type QuoteType = {
   quote: string;
   character: string;
   movie: string;
 };
 
-const quotes: Quote[] = [
+const quotes: QuoteType[] = [
   {
     quote: "It’s not about how hard you hit. It’s about how hard you can get hit and keep moving forward.",
     character: "Rocky Balboa",
@@ -115,7 +115,7 @@ function getRandomQuote() {
 	return quotes[floor(random() * length)]
 }
 
-function quoteEl(quote: Quote) {
+function quoteEl(quote: QuoteType) {
   return <>
     <h2 className="font-bold text-[3vw] text-center max-w-full leading-tight [text-wrap:balance]">
       {quote.quote}
@@ -123,7 +123,6 @@ function quoteEl(quote: Quote) {
     <span className="self-end text-lg">By {quote.character}, {quote.movie}</span>
   </>
 }
-
 
 export function Quote() {
 	const [quote, setQuote] = useState(getRandomQuote())
